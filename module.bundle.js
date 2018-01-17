@@ -383,11 +383,23 @@ var _polymerElement = __webpack_require__(3);
 
 __webpack_require__(16);
 
-var _style = __webpack_require__(22);
+var _hueRotate = __webpack_require__(22);
+
+var _hueRotate2 = _interopRequireDefault(_hueRotate);
+
+var _links = __webpack_require__(23);
+
+var _links2 = _interopRequireDefault(_links);
+
+var _typography = __webpack_require__(24);
+
+var _typography2 = _interopRequireDefault(_typography);
+
+var _style = __webpack_require__(25);
 
 var _style2 = _interopRequireDefault(_style);
 
-var _template = __webpack_require__(23);
+var _template = __webpack_require__(26);
 
 var _template2 = _interopRequireDefault(_template);
 
@@ -402,7 +414,7 @@ class SkApp extends _polymerElement.Element {
       },
       appVersion: {
         type: String,
-        value: "1.0.0-beta-1"
+        value: "1.0.0-beta-2"
       },
       ENV: {
         type: String,
@@ -413,7 +425,13 @@ class SkApp extends _polymerElement.Element {
 
   static get template() {
     return `
-      <style>${_style2.default}</style> ${_template2.default}`;
+      <style>
+        ${_typography2.default}
+        ${_links2.default}
+        ${_hueRotate2.default}
+        ${_style2.default}
+      </style>
+      ${_template2.default}`;
   }
 }
 
@@ -5425,7 +5443,7 @@ window.customElements.define('sk-menu-item', SkMenuItem);
 /* 18 */
 /***/ (function(module, exports) {
 
-module.exports = ":host{\n  contain:content;\n  display:-webkit-inline-box;\n  display:-ms-inline-flexbox;\n  display:inline-flex;\n  overflow:hidden;\n  position:relative;\n  -webkit-user-select:none;\n     -moz-user-select:none;\n      -ms-user-select:none;\n          user-select:none;\n  color:#091629;\n}\n\n::slotted(a){\n  padding:8px;\n}\n\n:host::after{\n  content:'';\n  pointer-events:none;\n  background-color:#BDF6E9;\n  position:absolute;\n  top:0;\n  bottom:0;\n  left:50%;\n  margin-left:-50%;\n  width:100%;\n  opacity:0.3;\n  -webkit-transform-origin:50% 50%;\n          transform-origin:50% 50%;\n  -webkit-transform:skew(-38deg, 0deg) scaleX(0);\n          transform:skew(-38deg, 0deg) scaleX(0);\n  -webkit-transition:all 1s cubic-bezier(0.4, 0, 0.2, 1);\n  transition:all 1s cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n:host(:hover)::after{\n  -webkit-transform:skew(-38deg, 0deg) scaleX(2);\n          transform:skew(-38deg, 0deg) scaleX(2);\n}\n"
+module.exports = ":host {\n  contain: content;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  overflow: hidden;\n  position: relative;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  color: #091629;\n}\n\n::slotted(a) {\n  padding: 8px;\n}\n\n\n:host::after {\n  content: '';\n  pointer-events: none;\n  background-color: #BDF6E9;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  margin-left: -50%;\n  width: 100%;\n  opacity: 0.3;\n  -webkit-transform-origin: 50% 50%;\n          transform-origin: 50% 50%;\n  -webkit-transform: skew(-38deg, 0deg) scaleX(0);\n          transform: skew(-38deg, 0deg) scaleX(0);\n  -webkit-transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);\n  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n\n:host(:hover)::after {\n  -webkit-transform: skew(-38deg, 0deg) scaleX(2);\n          transform: skew(-38deg, 0deg) scaleX(2);\n}\n"
 
 /***/ }),
 /* 19 */
@@ -5437,7 +5455,7 @@ module.exports = "<slot></slot>"
 /* 20 */
 /***/ (function(module, exports) {
 
-module.exports = ":host{\n  display:block;\n}\n\n\n.Navigation{\n  display:-webkit-box;\n  display:-ms-flexbox;\n  display:flex;\n  font-size:0.8rem;\n}\n\n\n.Navigation ::slotted(sk-menu-item:not(:first-of-type)){\n  margin-left:24px;\n}\n"
+module.exports = ":host {\n  display: block;\n}\n\n\n.Navigation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 12.8px;\n  font-size: 0.8rem;\n}\n\n\n.Navigation ::slotted(sk-menu-item:not(:first-of-type)) {\n  margin-left: 24px;\n}\n"
 
 /***/ }),
 /* 21 */
@@ -5449,13 +5467,31 @@ module.exports = "<nav class=\"Navigation\">\n  <slot></slot>\n</nav>"
 /* 22 */
 /***/ (function(module, exports) {
 
-module.exports = "a{\n  color:#091629;\n  text-decoration:none;\n  font-weight:bold;\n  -webkit-transition:color 200ms;\n  transition:color 200ms;\n}\na:hover{\n  color:#1DE9B6;\n}\np{\n  font-size:1em;\n  color:#9B9DAF;\n  line-height:1.8;\n}\n@-webkit-keyframes HueRotate{\n  0%{\n    -webkit-filter:none;\n            filter:none;\n  }\n\n  50%{\n    -webkit-filter:hue-rotate(360deg);\n            filter:hue-rotate(360deg);\n  }\n\n  100%{\n    -webkit-filter:none;\n            filter:none;\n  }\n}\n@keyframes HueRotate{\n  0%{\n    -webkit-filter:none;\n            filter:none;\n  }\n\n  50%{\n    -webkit-filter:hue-rotate(360deg);\n            filter:hue-rotate(360deg);\n  }\n\n  100%{\n    -webkit-filter:none;\n            filter:none;\n  }\n}\n:host{\n  display:block;\n  overflow:auto;\n  height:100vh;\n}\n.Header{\n  display:-webkit-box;\n  display:-ms-flexbox;\n  display:flex;\n  -webkit-box-orient:vertical;\n  -webkit-box-direction:normal;\n      -ms-flex-direction:column;\n          flex-direction:column;\n  -webkit-box-align:left;\n      -ms-flex-align:left;\n          align-items:left;\n  width:100%;\n  padding-right:40px;\n  -webkit-box-sizing:border-box;\n          box-sizing:border-box;\n}\n@media (min-width: 60em){\n  .Header{\n    -webkit-box-orient:horizontal;\n    -webkit-box-direction:normal;\n        -ms-flex-direction:row;\n            flex-direction:row;\n    -webkit-box-pack:justify;\n        -ms-flex-pack:justify;\n            justify-content:space-between;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n  }\n}\n.Logo{\n  display:block;\n  width:100%;\n  max-width:300px;\n}\n.Logo:hover{\n  -webkit-animation:HueRotate 1s infinite linear;\n          animation:HueRotate 1s infinite linear;\n}\nsk-menu{\n  margin-left:16px;\n}\n@media (min-width: 60em){\n  sk-menu{\n    margin-left:0;\n  }\n}\n.MenuLink:hover{\n  color:#091629;\n}\n.Welcome{\n  -webkit-box-pack:center;\n      -ms-flex-pack:center;\n          justify-content:center;\n  -webkit-box-align:center;\n      -ms-flex-align:center;\n          align-items:center;\n  display:-webkit-box;\n  display:-ms-flexbox;\n  display:flex;\n  -webkit-box-orient:vertical;\n  -webkit-box-direction:normal;\n      -ms-flex-direction:column;\n          flex-direction:column;\n  margin-top:10vh;\n  padding:0 40px;\n  -webkit-user-select:none;\n     -moz-user-select:none;\n      -ms-user-select:none;\n          user-select:none;\n  cursor:default;\n}\n.Title{\n  font-size:3em;\n  text-align:center;\n  font-weight:800;\n  margin-top:0;\n  margin-bottom:90px;\n}\n.Welcome p{\n  text-align:center;\n  margin-top:0;\n  max-width:60%;\n}\n.Meta{\n  font-size:0.5em;\n  opacity:0.5;\n  -webkit-user-select:none;\n     -moz-user-select:none;\n      -ms-user-select:none;\n          user-select:none;\n  cursor:default;\n  position:fixed;\n  bottom:16px;\n  right:16px;\n}\n"
+module.exports = "@-webkit-keyframes HueRotate {\n  0% {\n    -webkit-filter: none;\n            filter: none;\n  }\n\n  50% {\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter');\n    -webkit-filter: hue-rotate(360deg);\n            filter: hue-rotate(360deg);\n  }\n\n  100% {\n    -webkit-filter: none;\n            filter: none;\n  }\n}\n@keyframes HueRotate {\n  0% {\n    -webkit-filter: none;\n            filter: none;\n  }\n\n  50% {\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter');\n    -webkit-filter: hue-rotate(360deg);\n            filter: hue-rotate(360deg);\n  }\n\n  100% {\n    -webkit-filter: none;\n            filter: none;\n  }\n}"
 
 /***/ }),
 /* 23 */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"Header\">\n  <img class=\"Logo\" src=\"assets/logo.svg\" alt=\"Polymer Skeleton\" draggable=\"false\">\n\n  <sk-menu>\n    <sk-menu-item>\n      <a class=\"MenuLink\" href=\"https://github.com/PolymerX/polymer-skeleton\">Github</a>\n    </sk-menu-item>\n\n    <sk-menu-item>\n      <a class=\"MenuLink\" href=\"https://github.com/PolymerX/polymer-skeleton/issues\">Issues</a>\n    </sk-menu-item>\n\n    <sk-menu-item>\n      <a class=\"MenuLink\" href=\"https://github.com/PolymerX\">More from PolymerX</a>\n    </sk-menu-item>\n  </sk-menu>\n</header>\n\n\n<section class=\"Welcome\">\n  <h1 class=\"Title\">Welcome to Polymer 3</h1>\n  <p>\n    This is a demo template that contains some polymer 3 component. With the Shadow DOM you can forget about the CSS global scope and classes specificity.\n    Feel free to explore the project and start your own application.\n  </p>\n</section>\n\n\n<aside class=\"Meta\">\n  v[[appVersion]] - ENV: [[ENV]]\n</aside>\n\n\n"
+module.exports = "a {\n  color: #091629;\n  text-decoration: none;\n  font-weight: bold;\n  -webkit-transition: color 200ms;\n  transition: color 200ms;\n}\n\n\na:hover {\n  color: #1DE9B6;\n}\n\n"
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports) {
+
+module.exports = "p {\n  font-size: 1em;\n  color: #9B9DAF;\n  line-height: 1.8;\n}\n"
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: block;\n  overflow: auto;\n  height: 100vh;\n}\n\n\n.Header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: left;\n      -ms-flex-align: left;\n          align-items: left;\n  width: 100%;\n  padding-right: 40px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n\n.Logo {\n  display: block;\n  width: 100%;\n  max-width: 300px;\n}\n\n\n.Logo:hover {\n  -webkit-animation: HueRotate 1s infinite linear;\n          animation: HueRotate 1s infinite linear;\n}\n\n\nsk-menu {\n  margin-left: 16px;\n}\n\n\n.MenuLink:hover {\n  color: #091629;\n}\n\n\n@media (min-width: 60em) {\n  .Header {\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n  }\n\n  sk-menu {\n    margin-left: 0;\n  }\n}\n\n\n.Welcome {\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-top: 10vh;\n  padding: 0 40px;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: default;\n}\n\n\n.Title {\n  font-size: 3em;\n  text-align: center;\n  font-weight: 800;\n  margin-top: 0;\n  margin-bottom: 90px;\n}\n\n\n.Welcome p {\n  text-align: center;\n  margin-top: 0;\n  max-width: 60%;\n}\n\n\n.Meta {\n  font-size: 0.5em;\n  opacity: 0.5;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: default;\n  position: fixed;\n  bottom: 16px;\n  right: 16px;\n}\n"
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports) {
+
+module.exports = "<header class=\"Header\">\n  <img class=\"Logo\" src=\"/assets/logo.svg\" alt=\"Polymer Skeleton\" draggable=\"false\">\n\n  <sk-menu>\n    <sk-menu-item>\n      <a class=\"MenuLink\" href=\"https://github.com/PolymerX/polymer-skeleton\">Github</a>\n    </sk-menu-item>\n\n    <sk-menu-item>\n      <a class=\"MenuLink\" href=\"https://github.com/PolymerX/polymer-skeleton/issues\">Issues</a>\n    </sk-menu-item>\n\n    <sk-menu-item>\n      <a class=\"MenuLink\" href=\"https://github.com/PolymerX\">More from PolymerX</a>\n    </sk-menu-item>\n  </sk-menu>\n</header>\n\n\n<section class=\"Welcome\">\n  <h1 class=\"Title\">Welcome to Polymer 3</h1>\n  <p>\n    This is a demo template that contains some polymer 3 component. With the Shadow DOM you can forget about the CSS global scope and classes specificity.\n    Feel free to explore the project and start your own application.\n  </p>\n</section>\n\n\n<aside class=\"Meta\">\n  v[[appVersion]] - ENV: [[ENV]]\n</aside>\n\n\n"
 
 /***/ })
 /******/ ]);
