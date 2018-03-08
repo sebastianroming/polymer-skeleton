@@ -24,7 +24,6 @@
     "linkbower": "node scripts/link-bower.js",
     "rmbower": "node scripts/link-bower.js remove",
     "release": "standard-version",
-    "postinstall": "if [ $HEROKU ]; then yarn build; fi",
     "start": "http-server dist -p $PORT"
   },
   "xo": {
