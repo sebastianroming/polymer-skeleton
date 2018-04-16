@@ -1,9 +1,11 @@
 
 import {PolymerElement, html} from '@polymer/polymer/polymer-element';
+import '@polymer/app-layout/app-header-layout/app-header-layout';
+import '@polymer/app-layout/app-drawer-layout/app-drawer-layout';
+import '@polymer/app-layout/app-toolbar/app-toolbar';
 
 import css from './style.pcss';
 import template from './template.html';
-import '../../dumbs/sk-button';
 
 export default class SkApp extends PolymerElement {
 

@@ -1,97 +1,34 @@
-@import './../../../global-style/basics/media-queries.pcss';
-@import './../../../global-style/basics/links.pcss';
-@import './../../../global-style/basics/typography.pcss';
-@import './../../../global-style/keyframes/fadeIn.pcss';
-
 :host {
-  display: block;
-  overflow: auto;
-  height: 100vh;
-}
-
-
-.Welcome {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 10vh;
-  padding: 0 40px;
-  user-select: none;
-  cursor: default;
-  position: relative;
-  padding-top: 220px;
-  margin-bottom: 100px;
-}
-
-
-.Title {
-  font-size: 3em;
-  text-align: center;
-  font-weight: 800;
-  margin-top: 0;
-  margin-bottom: 40px;
-  opacity: 0;
-  animation-name: FadeIn;
-  animation-duration: 400ms;
-  animation-delay: 400ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
-
-
-.Welcome p {
-  text-align: center;
-  margin-top: 0;
-  max-width: 90%;
-  letter-spacing: 2px;
-  opacity: 0.8;
-  opacity: 0;
-  animation-name: FadeIn;
-  animation-duration: 400ms;
-  animation-delay: 500ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-
-  @media (--medium) {
-    max-width: 60%;
+  --test-elem: {
+    color:#F00;
   }
 }
 
-
-.Meta {
-  font-size: 0.5em;
-  opacity: 0.5;
-  user-select: none;
-  cursor: default;
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
+app-drawer-layout {
+  --app-drawer-width: 65px;
+  --app-drawer-layout-content-transition: margin 0.2s;
 }
 
-
-.SKLogo {
-  position: absolute;
-  top: -200px;
-  width: 600px;
-  opacity: 0;
-  animation-name: FadeIn;
-  animation-duration: 600ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-
-  @media (--medium) {
-    top: -180px;
+app-drawer {
+  --app-drawer-width: 65px;
+  --app-drawer-scrim-background: #FFF;
+  --app-drawer-content-container: {
+    background-color: #F00;
+    color:#00F;
   }
+
 }
 
+span.account-name {
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  pointer-events: none;
+  margin-right: 10px;
 
-sk-button {
-  margin-top: 80px;
-  opacity: 0;
-  animation-name: FadeIn;
-  animation-duration: 400ms;
-  animation-delay: 700ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
+  @apply --test-elem;
 }

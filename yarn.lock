@@ -2,6 +2,40 @@
 # yarn lockfile v1
 
 
+"@polymer/app-layout@3.0.0-pre.12":
+  version "3.0.0-pre.12"
+  resolved "https://registry.yarnpkg.com/@polymer/app-layout/-/app-layout-3.0.0-pre.12.tgz#3e93514ecdc5e02a6b9fca586eb9d46ff78a4992"
+  dependencies:
+    "@polymer/iron-flex-layout" "3.0.0-pre.12"
+    "@polymer/iron-media-query" "3.0.0-pre.12"
+    "@polymer/iron-resizable-behavior" "3.0.0-pre.12"
+    "@polymer/iron-scroll-target-behavior" "3.0.0-pre.12"
+    "@polymer/polymer" "3.0.0-pre.12"
+
+"@polymer/iron-flex-layout@3.0.0-pre.12":
+  version "3.0.0-pre.12"
+  resolved "https://registry.yarnpkg.com/@polymer/iron-flex-layout/-/iron-flex-layout-3.0.0-pre.12.tgz#209791d067521115e61a9fb2cb4070f0de82322b"
+  dependencies:
+    "@polymer/polymer" "3.0.0-pre.12"
+
+"@polymer/iron-media-query@3.0.0-pre.12":
+  version "3.0.0-pre.12"
+  resolved "https://registry.yarnpkg.com/@polymer/iron-media-query/-/iron-media-query-3.0.0-pre.12.tgz#b24ad27df566d6990798f5465a7bade40ee197d5"
+  dependencies:
+    "@polymer/polymer" "3.0.0-pre.12"
+
+"@polymer/iron-resizable-behavior@3.0.0-pre.12":
+  version "3.0.0-pre.12"
+  resolved "https://registry.yarnpkg.com/@polymer/iron-resizable-behavior/-/iron-resizable-behavior-3.0.0-pre.12.tgz#22d468736073c7a65552000bc607ef7507328380"
+  dependencies:
+    "@polymer/polymer" "3.0.0-pre.12"
+
+"@polymer/iron-scroll-target-behavior@3.0.0-pre.12":
+  version "3.0.0-pre.12"
+  resolved "https://registry.yarnpkg.com/@polymer/iron-scroll-target-behavior/-/iron-scroll-target-behavior-3.0.0-pre.12.tgz#1c8e579cb1267c9d224a3a05255f442aa989fb98"
+  dependencies:
+    "@polymer/polymer" "3.0.0-pre.12"
+
 "@polymer/polymer@3.0.0-pre.12":
   version "3.0.0-pre.12"
   resolved "https://registry.npmjs.org/@polymer/polymer/-/polymer-3.0.0-pre.12.tgz#3f5dd19099a194bf1066cf417ae13c335bd63b04"
@@ -6071,6 +6105,14 @@ portfinder@^1.0.13, portfinder@^1.0.9:
     async "^1.5.2"
     debug "^2.2.0"
     mkdirp "0.5.x"
+
+postcss-apply@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/postcss-apply/-/postcss-apply-0.9.0.tgz#a152e6e34a6c55d0895751929319c262c5d8c289"
+  dependencies:
+    babel-runtime "^6.23.0"
+    balanced-match "^0.4.2"
+    postcss "^6.0.0"
 
 postcss-apply@^0.8.0:
   version "0.8.0"

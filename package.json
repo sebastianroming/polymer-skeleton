@@ -60,6 +60,7 @@
     "http-server": "0.11.1",
     "lighthouse": "2.5.0",
     "postcss": "6.0.13",
+    "postcss-apply": "0.9.0",
     "postcss-cssnext": "3.0.2",
     "postcss-custom-media": "6.0.0",
     "postcss-discard-comments": "2.0.4",
@@ -83,6 +84,7 @@
     "xo": "0.18.2"
   },
   "dependencies": {
-    "@polymer/polymer": "3.0.0-pre.12"
+    "@polymer/polymer": "3.0.0-pre.12",
+    "@polymer/app-layout": "3.0.0-pre.12"
   }
 }
