@@ -8,6 +8,7 @@ module.exports = () => ({
         '.sss'
       ]
     }),
+    require('postcss-apply'),
     require('stylelint')({
       configFile: '.stylelintrc'
     }),
